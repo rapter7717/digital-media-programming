@@ -62,7 +62,9 @@ if ( userName == fullName[1] ||userName == fullName[2] ||userName == fullName[3]
     var output = document.getElementsByClassName  ("javascriptOutput")[0];
     newDiv.appendChild(secret);
     document.body.insertBefore(newDiv, output);
-} else if (userName == forbidden[0]) {
-    docuemnt.getElementsByTagName ("body").innerHTML="";
+} else if (userName == forbidden) {
+    document.getElementsByTagName("body")[0].innerHTML="YOU'RE NOT WELCOME HERE ";
+    document.querySelector("body").setAttribute("style", "color: white; background-color: black");
+    console.log ("Something");
 }
 
