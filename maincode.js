@@ -12,6 +12,7 @@ console.log(num);
 var students=["Adrian","Austin","Dakota"];
 var fullName=["Austin Smith", "Susan Escobar", "Benita Acosta", "Francine Baillargeon", "Adrain Martinez", "Dakota Colorado"];
 var instructors=["Susan"];
+var forbidden = "Steve";
 console.log(students);
 function testFunction (userName){
     var greeting= "Were so glad you're here " + userName + "!";
@@ -47,9 +48,7 @@ if (crazyFactor > 400) {
 } else {
     console.log ("The If statement didn't work");
 }
-var forbidden = "Steve"
 
-//I know there has to be a way to compare to all in array, but I couldn't find it 
 if ( userName == fullName[1] ||userName == fullName[2] ||userName == fullName[3] ||userName == fullName[4] || userName == fullName[5]){
     var newP = document.createElement ("p");
     var message = document.createTextNode ("You're very specific, aren't you‽");
@@ -66,5 +65,10 @@ if ( userName == fullName[1] ||userName == fullName[2] ||userName == fullName[3]
     document.getElementsByTagName("body")[0].innerHTML="YOU'RE NOT WELCOME HERE ";
     document.querySelector("body").setAttribute("style", "color: white; background-color: black");
     console.log ("Something");
+} else {
+    var subTitle = document.getElementsByTagName ("h2")[0];
+    var nothingSpecial = document.createTextNode (" You haven't triggered any special actions");
+    document.querySelector("body").setAttribute("style","background-color: aliceblue");
+    subTitle.appendChild(nothingSpecial);
 }
 
