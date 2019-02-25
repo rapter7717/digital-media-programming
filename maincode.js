@@ -62,7 +62,7 @@ if ( userName == fullName[1] ||userName == fullName[2] ||userName == fullName[3]
     newDiv.appendChild(secret);
     document.body.insertBefore(newDiv, output);
 } else if (userName == forbidden) {
-    document.getElementsByTagName("body")[0].innerHTML="YOU'RE NOT WELCOME HERE ";
+    document.getElementsByTagName("body")[0].innerHTML="YOU'RE NOT WELCOME HERE! ";
     document.querySelector("body").setAttribute("style", "color: white; background-color: black");
     console.log ("Something");
 } else {
@@ -71,6 +71,7 @@ if ( userName == fullName[1] ||userName == fullName[2] ||userName == fullName[3]
     document.querySelector("body").setAttribute("style","background-color: aliceblue");
     subTitle.appendChild(nothingSpecial);
 }
+
 
 var date = new Date();
 console.log(date);
@@ -97,4 +98,16 @@ function runClock () {
     SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
 }
 
-var interval = setInterval(runClock, 1000);
+
+var viewClock = prompt("Do you want the time?", "yes");
+
+if (viewClock == "yes"){
+    var interval = setInterval(runClock, 1000);
+} else {
+    document.getElementsByClassName("main")[0].innerHTML="Well then we just won't show it to you... ";
+    //was trying to figure out how to add all that html, but that got complex enough that the smarter option was just to remove it.
+}
+
+
+
+
