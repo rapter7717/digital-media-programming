@@ -57,7 +57,7 @@ if ( userName == fullName[1] ||userName == fullName[2] ||userName == fullName[3]
     document.body.insertBefore(newP, title);
 } else if (userName == fullName[0]){
     var newDiv = document.createElement ("div");
-    var secret = document.createTextNode ("You've found a Secret")
+    var secret = document.createTextNode ("You've found a Secret");
     var output = document.getElementsByClassName  ("javascriptOutput")[0];
     newDiv.appendChild(secret);
     document.body.insertBefore(newDiv, output);
@@ -108,6 +108,24 @@ if (viewClock == "yes"){
     //was trying to figure out how to add all that html, but that got complex enough that the smarter option was just to remove it.
 }
 
+
+if (students.includes(userName)) {
+    console.log('array works');
+    var date = new Date();
+    let dy = date.getDate();
+    let mth = date.getMonth();
+    let yr = date.getFullYear();
+    console.log(dy);
+    console.log(mth+1);
+    console.log(yr);
+    var newDiv = document.createElement ("div");
+    var standardDate = document.createTextNode ((mth+1) + "-" + (dy) + "-" +(yr));
+    var main = document.getElementsByClassName  ("datebox")[0];
+    newDiv.appendChild(standardDate);
+    document.body.insertBefore(newDiv, main);
+ } else if (fullName.includes(userName)) {
+
+ }
 
 
 
