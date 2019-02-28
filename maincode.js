@@ -109,18 +109,15 @@ if (viewClock == "yes"){
 }
 
 
-if (students.includes(userName)) {
-    console.log('array works');
+if (students.includes(userName) || fullName.includes(userName) || instructors.includes(userName)) {
     var date = new Date();
     let dy = date.getDate();
     let mth = date.getMonth();
     let yr = date.getFullYear();
-    console.log(dy);
-    console.log(mth+1);
-    console.log(yr);
     var newDiv = document.createElement ("div");
-    var standardDate = document.createTextNode ((mth+1) + "-" + (dy) + "-" +(yr));
-    var main = document.getElementsByClassName  ("datebox")[0];
+    newDiv.className = 'datebox';
+    var standardDate = document.createTextNode ((mth+1) + "-" + (dy) + "-" + (yr));
+    var main = document.getElementsByClassName  ("postclock")[0];
     newDiv.appendChild(standardDate);
     document.body.insertBefore(newDiv, main);
  } else if (fullName.includes(userName)) {

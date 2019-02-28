@@ -81,3 +81,8 @@ p {
     transform-origin: 300px 300px;
     transition: transform .5s ease-in-out;
 }
+
+.datebox {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font: bold;
+}
